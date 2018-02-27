@@ -18,7 +18,7 @@ int main() {
 
 
 
-    gotoxy(40,8);cout<<"[1] POBIERZ BAZE Z PLIKU.";
+    gotoxy(40,8);cout<<"[1] POBIERZ BAZE Z PLIKU WSADOWEGO.";
     gotoxy(40,10);cout<<"[2] UTWORZ NOWA BAZE.";
 
 

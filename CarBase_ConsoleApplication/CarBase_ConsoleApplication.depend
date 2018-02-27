@@ -51,3 +51,29 @@
 	<conio.h>
 	"classFileToProject.h"
 
+1519730936 source:c:\users\grzegorz\desktop\git\carbase_consoleapplication\carbase_consoleapplication\main.cpp
+	<string>
+	<fstream>
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	"classFileToProject.h"
+
+1519740409 c:\users\grzegorz\desktop\git\carbase_consoleapplication\carbase_consoleapplication\include\classfiletoproject.h
+	<windows.h>
+	<stdio.h>
+	<string>
+	<fstream>
+
+1519740410 source:c:\users\grzegorz\desktop\git\carbase_consoleapplication\carbase_consoleapplication\src\classfiletoproject.cpp
+	<windows.h>
+	"classFileToProject.h"
+	<string.h>
+	<iostream>
+	<conio.h>
+	<stdlib.h>
+	<cstdlib>
+	<stdio.h>
+	<string>
+	<fstream>
+

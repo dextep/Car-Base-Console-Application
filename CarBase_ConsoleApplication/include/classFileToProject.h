@@ -8,12 +8,6 @@
 
 #define N 30
 
-void displayStringSlowlyOnTheScreen (char *introducedStringConstant,
- char *introducedStringVariable, int howManyTimes,int x, int y, int displaySpeed, bool CLS);
-bool youAreSureOfYourDecision (char *introducedString, bool CLS, int x, int y);
-void gotoxy (int x, int y);
-void printExit ();
-
 class Car {
 protected:
     char carBrand [N];
@@ -88,5 +82,11 @@ public:
     void clearSearchTabel();
 
 };
+
+void displayStringSlowlyOnTheScreen (char *introducedStringConstant,
+char *introducedStringVariable, int howManyTimes,int x, int y, int displaySpeed, bool CLS);
+bool youAreSureOfYourDecision (char *introducedString, bool CLS, int x, int y);
+void gotoxy (int x, int y);
+void printExit ();
 
 #endif // CLASSFILETOPROJECT_H

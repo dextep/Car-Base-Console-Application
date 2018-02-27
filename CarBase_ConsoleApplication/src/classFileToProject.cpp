@@ -11,53 +11,6 @@
 
 using namespace std;
 
-void printExit () {
-    displayStringSlowlyOnTheScreen({""},{"Mozna teraz bezpiecznie"},1,50,10,20,1);
-    displayStringSlowlyOnTheScreen({""},{"wylaczyc komputer"},1,52,11,20,0);
-    displayStringSlowlyOnTheScreen({""},{"..."},3,69,11,500,0);
-    cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
-}
-
-
-bool youAreSureOfYourDecision (char *introducedString, bool CLS, int x, int y) {
-    if(1==CLS)
-        system("cls");
-    char typedKeyOnTheKeyboardDecision = '\0';
-    gotoxy(x,y); cout<<"Czy na pewno chcesz "<<introducedString<<" ?\t[T]ak lub [N]ie.\n";
-    typedKeyOnTheKeyboardDecision=getch();
-    do {
-        if(typedKeyOnTheKeyboardDecision=='t' || typedKeyOnTheKeyboardDecision=='T') {
-            return 1;
-            break;
-        }
-        else if (typedKeyOnTheKeyboardDecision=='n' || typedKeyOnTheKeyboardDecision=='N') {
-            return 0;
-            break;
-        }
-        gotoxy(x,y); cout<<"Niepoprwana decyzja. Prosze o wybranie [T]ak lub [N]ie.                                            \n";
-        typedKeyOnTheKeyboardDecision=getch();
-    }while ( typedKeyOnTheKeyboardDecision != 'n' && typedKeyOnTheKeyboardDecision != 'N' );
-
-    return 0;
-}
-
-void displayStringSlowlyOnTheScreen (char *introducedStringConstant,
- char *introducedStringVariable, int howManyTimes,int x, int y, int displaySpeed,bool CLS) {
-
-    int introducedStringLenght = strlen(introducedStringVariable);
-    if(1==CLS)
-        system("cls");
-    for (int i = 0; i < howManyTimes; i++){
-    gotoxy(x,y);
-    cout<<introducedStringConstant<<"                                                                              ";
-    gotoxy(x,y);
-    cout<<introducedStringConstant;
-        for (int j = 0; j < introducedStringLenght; j++) {
-            cout<<introducedStringVariable[j];
-            Sleep(displaySpeed);
-        }
-    }
-}
 
 void gotoxy(int x, int y) {
 	COORD c;
@@ -368,7 +321,7 @@ bool BaseOfCars::sortByYear(int l, int r)
 bool BaseOfCars::loadDataFromTheTxtFile( ) {
 
     fstream plik;
-    plik.open("auta.txt" , ios::in);
+    plik.open("PLIK_WSADOWY.txt" , ios::in);
 
     int i = 0 ;
 
@@ -511,4 +464,51 @@ void BaseOfCars::clearSearchTabel() {
     for(int i = 0; i < sizeOfSearchTable; i++)
         searchedTable[i].clearDataAbaoutCar();
 
+}
+
+bool youAreSureOfYourDecision (char *introducedString, bool CLS, int x, int y) {
+    if(1==CLS)
+        system("cls");
+    char typedKeyOnTheKeyboardDecision = '\0';
+    gotoxy(x,y); cout<<"Czy na pewno chcesz "<<introducedString<<" ?\t[T]ak lub [N]ie.\n";
+    typedKeyOnTheKeyboardDecision=getch();
+    do {
+        if(typedKeyOnTheKeyboardDecision=='t' || typedKeyOnTheKeyboardDecision=='T') {
+            return 1;
+            break;
+        }
+        else if (typedKeyOnTheKeyboardDecision=='n' || typedKeyOnTheKeyboardDecision=='N') {
+            return 0;
+            break;
+        }
+        gotoxy(x,y); cout<<"Niepoprwana decyzja. Prosze o wybranie [T]ak lub [N]ie.                                            \n";
+        typedKeyOnTheKeyboardDecision=getch();
+    }while ( typedKeyOnTheKeyboardDecision != 'n' && typedKeyOnTheKeyboardDecision != 'N' );
+
+    return 0;
+}
+
+void displayStringSlowlyOnTheScreen (char *introducedStringConstant,
+ char *introducedStringVariable, int howManyTimes,int x, int y, int displaySpeed,bool CLS) {
+
+    int introducedStringLenght = strlen(introducedStringVariable);
+    if(1==CLS)
+        system("cls");
+    for (int i = 0; i < howManyTimes; i++){
+    gotoxy(x,y);
+    cout<<introducedStringConstant<<"                                                                              ";
+    gotoxy(x,y);
+    cout<<introducedStringConstant;
+        for (int j = 0; j < introducedStringLenght; j++) {
+            cout<<introducedStringVariable[j];
+            Sleep(displaySpeed);
+        }
+    }
+}
+
+void printExit () {
+    displayStringSlowlyOnTheScreen({""},{"Mozna teraz bezpiecznie"},1,50,10,20,1);
+    displayStringSlowlyOnTheScreen({""},{"wylaczyc komputer"},1,52,11,20,0);
+    displayStringSlowlyOnTheScreen({""},{"..."},3,69,11,500,0);
+    cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
 }
