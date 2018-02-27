@@ -1,0 +1,53 @@
+# depslib dependency file v1.0
+1515618103 source:c:\users\grzegorz\desktop\consolappproject\main.cpp
+	<string>
+	<fstream>
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	"classFileToProject.h"
+
+1515618600 c:\users\grzegorz\desktop\consolappproject\include\classfiletoproject.h
+	<windows.h>
+	<stdio.h>
+	<string>
+	<fstream>
+
+1515618600 source:c:\users\grzegorz\desktop\consolappproject\src\classfiletoproject.cpp
+	<windows.h>
+	"classFileToProject.h"
+	<string.h>
+	<iostream>
+	<conio.h>
+	<stdlib.h>
+	<cstdlib>
+	<stdio.h>
+	<string>
+	<fstream>
+
+1515618600 source:c:\users\grzegorz\downloads\consolappproject\src\classfiletoproject.cpp
+	<windows.h>
+	"classFileToProject.h"
+	<string.h>
+	<iostream>
+	<conio.h>
+	<stdlib.h>
+	<cstdlib>
+	<stdio.h>
+	<string>
+	<fstream>
+
+1515618600 c:\users\grzegorz\downloads\consolappproject\include\classfiletoproject.h
+	<windows.h>
+	<stdio.h>
+	<string>
+	<fstream>
+
+1515619133 source:c:\users\grzegorz\downloads\consolappproject\main.cpp
+	<string>
+	<fstream>
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	"classFileToProject.h"
+
